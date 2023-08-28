@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter API</title>
+    <!-- TailwindCSS and DaisyUI Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+   .Poppins{
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
+</head>
+<body class="Poppins bg-gray-300">
+    <header></header>
+    <main class=" container py-10 mx-auto">
+        <!-- search field -->
+        <section class="bg-gray-400 p-4 rounded-lg mb-4">
+            <input id="input-field" type="text" placeholder="search " class="input input-bordered w-full max-w-xs" />
+            <button onclick="handelSearch()" class="bg-[#0D6EFD] px-6 py-2 rounded-lg text-white font-medium text-xl">Search</button>
+        </section>
+            <!-- spinner or loader -->
+        <div class="text-center w-3/6 mx-auto relative z-10 hidden">
+            <span class="loading loading-ring loading-xs w-full absolute top-2/4 left-0"></span>
+        </div>
+        <!-- phone-container  phone Card -->
+        <div id="phone-container" class=" grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        </div>
+
+        <div id="show-all-container" class="card-actions justify-center pt-10 hidden">
+            <button class="bg-[#02d3f8] px-10 py-2 rounded-lg text-white font-semibold text-xl">Show ALL</button>
+          </div>
+    </main>
+    <footer></footer>
+
+
+    <!-- javascript link -->
+    <script src="js/hunter.js"></script>
+</body>
+</html>
